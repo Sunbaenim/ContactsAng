@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+body, h1, h2, h3, h4, h5, h6, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+body {
+    background-color: #EDF1F5;
+}
+.element-content {
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid #E1F1F5;
+    padding: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.cursor {
+    cursor: pointer;
+}
+.hover:hover {
+    color: #673AB7;
+    font-weight: 500;
+}
+.primary-color {
+    color: #673AB7;
+}
