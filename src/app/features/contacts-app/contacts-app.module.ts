@@ -5,6 +5,7 @@ import { ContactsAppRoutingModule } from './contacts-app-routing.module';
 import { ContactsAppComponent } from './contacts-app.component';
 import { ContactComponent } from './contact/contact.component';
 import { PhoneComponent } from './contact/phone/phone.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -15,7 +16,7 @@ import { PhoneComponent } from './contact/phone/phone.component';
   ],
   imports: [
     CommonModule,
-    ContactsAppRoutingModule
+    ContactsAppRoutingModule,
   ]
 })
 export class ContactsAppModule { }
