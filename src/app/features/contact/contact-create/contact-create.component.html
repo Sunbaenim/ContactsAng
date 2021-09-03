@@ -1,0 +1,37 @@
+<form [formGroup]="contactCreateGroup" (ngSubmit)="addContact()">
+    <span class="p-float-label">
+        <input class="float-input" type="text" formControlName="lastName" pInputText> 
+        <label for="float-input">Nom</label>
+    </span>
+    <span class="p-float-label">
+        <input class="float-input" type="text" formControlName="firstName" pInputText> 
+        <label for="float-input">Prénom</label>
+    </span>
+    <span class="p-float-label">
+        <input class="float-input" type="email" formControlName="email" pInputText> 
+        <label for="float-input">Email</label>
+    </span>
+    <span class="p-float-label">
+        <input class="float-input" type="date" formControlName="birthDate" pInputText>
+        <label for="float-input">Date de naissance</label>
+    </span>
+    <!-- <span class="p-float-label">
+        <p-inputMask mask="99/99/9999" formControlName="birthDate"></p-inputMask>
+        <label for="float-input">Date de naissance</label>
+    </span> -->
+    <div formGroupName="phone">
+        <span class="p-float-label">
+            <input type="text" formControlName="type" pInputText>
+            <label for="float-input">Label</label>
+        </span>
+        <!-- <span class="p-float-label">
+            <input class="float-input test" type="text" formControlName="number" pInputText>
+            <label for="float-input">Numéro de téléphone</label>
+        </span> -->
+        <span class="p-float-label">
+            <p-inputMask mask="9999 99 99 99" formControlName="number"></p-inputMask>
+            <label for="float-input">Numéro de téléphone</label>
+        </span>
+    </div>
+    <button pButton type="submit" [disabled]="!contactCreateGroup.valid">Ajouter le contact</button>
+</form>

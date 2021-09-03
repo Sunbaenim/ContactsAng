@@ -1,0 +1,17 @@
+<div *ngIf="contactDetails">
+    <div>
+        <h4>{{contactDetails.lastName | uppercase}} {{contactDetails.firstName | titlecase}}</h4>
+    </div>
+    <div>
+        <span>{{contactDetails.email}}</span>
+    </div>
+    <div *ngIf="contactDetails.birthDate">
+        <span>{{contactDetails.birthDate | date:'dd/MM/yyyy'}}, </span><span class="bold">{{getAge()}} ans</span>
+    </div>
+    <ul>
+        <li *ngFor="let phone of contactPhones">
+            <p>{{phone.type}}</p>
+            <p>{{phone.number}}</p>
+        </li>
+    </ul>
+</div>

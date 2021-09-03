@@ -1,0 +1,16 @@
+.list-page {
+    position: relative;
+    margin-left: 50px;
+}
+.top-right {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+}
+.navigation-button {
+    display: flex;
+    justify-content: center;
+}
+.navigation-button :first-child {
+    margin-right: 20px;
+}

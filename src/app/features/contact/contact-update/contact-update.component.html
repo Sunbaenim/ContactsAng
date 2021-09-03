@@ -1,0 +1,36 @@
+<form [formGroup]="contactCreateGroup" (ngSubmit)="updateContact()">
+    <span class="p-float-label">
+        <input class="float-input" type="text" formControlName="lastName" pInputText> 
+        <label for="float-input">Nom</label>
+    </span>
+    <span class="p-float-label">
+        <input class="float-input" type="text" formControlName="firstName" pInputText> 
+        <label for="float-input">Prénom</label>
+    </span>
+    <span class="p-float-label">
+        <input class="float-input" type="email" formControlName="email" pInputText> 
+        <label for="float-input">Email</label>
+    </span>
+    <span class="p-float-label">
+        <input class="float-input" type="date" formControlName="birthDate" pInputText>
+        <label for="float-input">Date de naissance</label>
+    </span>
+</form>
+<form [formGroup]="phoneCreateGroup">
+    <span class="p-float-label">
+        <input type="text" formControlName="type" pInputText>
+        <label for="float-input">Label</label>
+    </span>
+    <span class="p-float-label">
+        <p-inputMask mask="9999 99 99 99" formControlName="number"></p-inputMask>
+        <label for="float-input">Numéro de téléphone</label>
+    </span>
+    <button type="button" (click)="addControlToArray()">Ajouter un numéro de téléphone</button>
+    <div formArrayName="phoneList">
+        <span *ngFor="getPhoneArray().controls != null; let i = index" class="p-float-label">
+        <p-inputMask mask="9999 99 99 99" formControlName="i"></p-inputMask>
+        <label for="float-input">Numéro de téléphone {{i + 1}}</label>
+        </span>
+    </div>
+</form>
+<button pButton type="submit" [disabled]="!contactCreateGroup.valid && !phoneCreateGroup.valid" (click)="updateContact()">Enregistrer</button>

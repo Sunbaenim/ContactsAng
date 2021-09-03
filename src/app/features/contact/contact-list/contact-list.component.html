@@ -1,0 +1,14 @@
+<div class="list-page">
+    <button class="p-button-outlined top-right" pButton type="button" (click)="navigateToCreate()"><i class="pi pi-plus"></i></button>
+    <table>
+        <tr *ngFor="let contact of listContacts; let i = index;">
+            <td><a class="cursor hover" (click)="navigateToId('contact/details/', contact.id)">{{contact.lastName}} {{contact.firstName}}</a></td>
+            <td><a class="cursor hover" (click)="navigateToId('contact/update/', contact.id)"><i class="pi pi-pencil"></i></a></td>
+            <td><a class="cursor hover" (click)="deleteContact(contact.id)"><i class="pi pi-trash"></i></a></td>
+        </tr>
+    </table>
+    <div class="navigation-button">
+        <button pButton type="button" (click)="lessContacts()">Moins</button>
+        <button pButton type="button" (click)="moreContacts()">Plus</button>
+    </div>
+</div>

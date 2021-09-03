@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  urlContactsAPI : "http://localhost:58795/api/"
+  urlContactAPI : "http://localhost:58795/api/Contact/",
+  urlPhoneAPI : "http://localhost:58795/api/Phone/"
 
 };
 
